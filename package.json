@@ -34,7 +34,7 @@
     "ember-cli-release": "0.2.8",
     "ember-cli-sass": "5.0.1",
     "ember-cli-uglify": "1.2.0",
-    "ember-component-css": "0.1.6",
+    "ember-component-css": "mirego/ember-component-css#d9922034d2bd865fae69a3f11f363e9de657916c",
     "ember-data": "2.1.0",
     "ember-export-application-global": "1.0.5",
     "ember-i18n": "4.1.4",
