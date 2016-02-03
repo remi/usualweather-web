@@ -9,11 +9,21 @@
   font-size: 12px;
 }
 
-& a {
+.applicationFooter-authorLink,
+.applicationFooter-toolLink {
   color: rgba(#fff, 0.5);
 
   &:focus,
   &:hover {
     color: rgba(#fff, 0.75);
+  }
+}
+
+.applicationFooter-sourceLink {
+  color: rgba(#fff, 0.3);
+
+  &:focus,
+  &:hover {
+    color: rgba(#fff, 0.5);
   }
 }
