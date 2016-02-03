@@ -26,7 +26,7 @@ export default Component.extend({
     }
 
     if (this.get('integerNumber') < MINUS_TWENTY) {
-      return 'Wait. That can’t be right. OR IS IT?!';
+      return 'Are you kidding me?';
     }
 
     return null;
