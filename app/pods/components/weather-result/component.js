@@ -18,7 +18,7 @@ export default Component.extend({
 
   comment: function() {
     if (this.get('integerNumber') === ZERO) {
-      return 'Zero?';
+      return 'Zero? Nice.';
     }
 
     if (this.get('integerNumber') > TWENTY) {
