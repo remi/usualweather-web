@@ -1,0 +1,15 @@
+<span>
+  The usual weather in
+</span>
+
+{{select-input
+  options=model.cities
+  selectedId=model.city.id
+  onChange='onCityChange'
+}}
+
+<span>
+  around
+</span>
+
+{{outlet}}

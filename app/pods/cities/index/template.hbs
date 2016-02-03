@@ -1,0 +1,21 @@
+<span>
+  The usual weather in
+</span>
+
+{{select-input
+  options=model.cities
+  onChange='onCityChange'
+}}
+
+<span>
+  around
+</span>
+
+{{select-input
+  isDisabled=true
+  options=model.months
+}}
+
+<span>is…</span>
+
+{{outlet}}

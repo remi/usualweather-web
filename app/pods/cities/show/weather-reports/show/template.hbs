@@ -1,0 +1,13 @@
+{{select-input
+  options=model.months
+  selectedId=model.weatherReport.month
+  onChange='onMonthChange'
+}}
+
+<span>
+  is:
+</span>
+
+{{weather-result
+  number=model.weatherReport.average_weather
+}}

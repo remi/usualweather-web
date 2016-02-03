@@ -1,0 +1,7 @@
+<select disabled={{isDisabled}} class="selectInput-field" {{action 'handleChange' on='change'}}>
+  <option selected="{{isBlankSelected}}" value="{{emptyId}}">…</option>
+
+  {{#each htmlOptions as |option| }}
+    <option selected="{{option.selected}}" value="{{option.id}}">{{option.name}}</option>
+  {{/each}}
+</select>

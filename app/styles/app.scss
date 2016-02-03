@@ -1,0 +1,29 @@
+@import 'pod-styles';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: rgb(187, 91, 35);  // orange
+  background: rgb(46, 157, 229); // blue
+  //background: rgb(43, 191, 158); // green
+  color: #fff;
+  font-family: "proxima-nova", "Helvetica", sans-serif;
+  font-size: 24px;
+}
+
+// NOTE: This is required because Ember wraps every template with a `<div // class="ember-view">` element
+body > * {
+  height: 100%;
+}
+
+.loading {
+  font-size: 16px;
+  color: rgba(#fff, 0.75);
+}
+
+.error {
+  font-size: 18px;
+  color: rgba(#fff, 0.75);
+}
