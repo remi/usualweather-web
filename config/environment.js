@@ -27,7 +27,7 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'script-src': "'self' 'unsafe-inline' use.typekit.net",
+    'script-src': "'self' 'unsafe-inline' use.typekit.net https://www.google-analytics.com",
     'font-src': "'self' data: use.typekit.net",
     'connect-src': "'self' " + ENV.API.HOST,
     'img-src': '* p.typekit.net',
