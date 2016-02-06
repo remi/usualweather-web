@@ -3,3 +3,13 @@
   margin: 0 0 40px;
   text-align: center;
 }
+
+.applicationContent-logo-image {
+  width: 160px;
+}
+
+@media only screen and (max-width: 600px) {
+  .applicationContent-logo-image {
+    width: 80px;
+  }
+}
