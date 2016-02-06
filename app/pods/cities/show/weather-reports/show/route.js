@@ -3,6 +3,10 @@ import Ember from 'ember';
 const {Route, RSVP} = Ember;
 
 export default Route.extend({
+  titleToken(model) {
+    return model.month.get('name');
+  },
+
   model(params) {
     const {cities, months} = this.modelFor('cities');
     const {city} = this.modelFor('cities.show');
@@ -17,6 +21,6 @@ export default Route.extend({
       weatherReport = null;
     }
 
-    return RSVP.hash({cities, city, weatherReports, weatherReport, months});
+    return RSVP.hash({cities, city, weatherReports, weatherReport, months, month});
   }
 });
