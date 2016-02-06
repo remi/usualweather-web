@@ -3,7 +3,6 @@ import Ember from 'ember';
 const {Component, Object} = Ember;
 
 export default Component.extend({
-  classNames: ['selectInput'],
   options: [],
   isDisabled: false,
   emptyId: null,

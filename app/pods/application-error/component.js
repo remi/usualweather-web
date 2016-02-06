@@ -2,6 +2,4 @@ import Ember from 'ember';
 
 const {Component} = Ember;
 
-export default Component.extend({
-  classNames: ['applicationError']
-});
+export default Component.extend();

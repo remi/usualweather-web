@@ -9,8 +9,8 @@
   font-size: 12px;
 }
 
-.applicationFooter-authorLink,
-.applicationFooter-toolLink {
+.authorLink,
+.toolLink {
   color: rgba(#fff, 0.5);
 
   &:focus,
@@ -19,7 +19,7 @@
   }
 }
 
-.applicationFooter-sourceLink {
+.sourceLink {
   color: rgba(#fff, 0.3);
 
   &:focus,

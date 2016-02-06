@@ -7,7 +7,6 @@ const TWENTY = 20;
 const MINUS_TWENTY = -20;
 
 export default Component.extend({
-  classNames: ['weatherResult'],
   number: null,
   isVisible: computed.notEmpty('number'),
   commentIsVisible: computed.notEmpty('comment'),
