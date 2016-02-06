@@ -9,7 +9,11 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .applicationContent-logo-image {
+  & {
+    margin: 0 0 20px;
+  }
+
+  .logo {
     width: 80px;
   }
 }
