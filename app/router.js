@@ -6,7 +6,7 @@ const router = Router.extend({
   location: config.locationType
 });
 
-export default router.map(function() {
+router.map(function() {
   this.route('cities', {path: ''}, function() {
     this.route('show', {path: ':city_id'}, function() {
       this.route('weather-reports', {path: 'around'}, function() {
@@ -15,3 +15,5 @@ export default router.map(function() {
     });
   });
 });
+
+export default router;

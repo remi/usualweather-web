@@ -1,8 +1,5 @@
-{{select-input
-  options=model.months
-  onChange='onMonthChange'
-}}
+<select-input
+  options={{model.months}}
+  on-change={{action 'onMonthChange'}} />
 
-<span>
-  is…
-</span>
+<span>is…</span>

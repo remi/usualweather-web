@@ -1,38 +1,34 @@
 import Ember from 'ember';
 
-const {Component, Object} = Ember;
+const {GlimmerComponent, Object} = Ember;
 
-export default Component.extend({
-  options: [],
-  isDisabled: false,
-  emptyId: null,
-
+export default GlimmerComponent.extend({
   isBlankSelected: function() {
-    if (this.get('selectedId') === this.get('emptyId')) {
+    if (this.attrs['selected-id'] === this.attrs['empty-id']) {
       return 'selected';
     } else {
       return '';
     }
-  }.property('options', 'selectedId', 'emptyId'),
+  }.property('attrs.options', 'attrs.selected-id', 'attrs.empty-id'),
 
   htmlOptions: function() {
-    return this.get('options').reduce((memo, option) => {
+    return this.attrs.options.reduce((memo, option) => {
       let newOption = Object.create(option.getProperties(['id', 'name']));
 
-      const selected = (this.get('selectedId') && (newOption.get('id') === this.get('selectedId')));
+      const selected = (this.attrs['selected-id'] && (newOption.get('id') === this.attrs['selected-id']));
       newOption.set('selected', selected ? 'selected' : '');
 
       memo.push(newOption);
       return memo;
     }, []);
-  }.property('options', 'selectedId'),
+  }.property('attrs.options', 'attrs.selected-id'),
 
   actions: {
     handleChange() {
       let id = this.$('select').val();
-      if (id === '') id = this.get('emptyId');
+      if (id === '') id = this.attrs.emptyId;
 
-      this.sendAction('onChange', id);
+      this.attrs['on-change'](id);
     }
   }
 });

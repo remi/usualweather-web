@@ -1,13 +1,8 @@
-{{select-input
-  options=model.months
-  selectedId=model.weatherReport.month
-  onChange='onMonthChange'
-}}
+<select-input
+  options={{model.months}}
+  selected-id={{model.weatherReport.month}}
+  on-change={{action 'onMonthChange'}} />
 
-<span>
-  is:
-</span>
+<span>is:</span>
 
-{{weather-result
-  number=model.weatherReport.average_weather
-}}
+<weather-result number={{model.weatherReport.average_weather}} />

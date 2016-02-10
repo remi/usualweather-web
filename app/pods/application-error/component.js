@@ -1,5 +1,5 @@
 import Ember from 'ember';
 
-const {Component} = Ember;
+const {GlimmerComponent} = Ember;
 
-export default Component.extend();
+export default GlimmerComponent.extend();

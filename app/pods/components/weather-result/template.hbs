@@ -1,9 +1,11 @@
-<div class="label">
-  <span class="number">{{number}}</span>°C
-</div>
-
-{{#if commentIsVisible}}
-  <div class="comment">
-    {{comment}}
+<div>
+  <div class="label">
+    <span class="number">{{attrs.number}}</span>°C
   </div>
-{{/if}}
+
+  {{#if commentIsVisible}}
+    <div class="comment">
+      {{comment}}
+    </div>
+  {{/if}}
+</div>

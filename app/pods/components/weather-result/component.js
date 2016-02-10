@@ -1,19 +1,18 @@
 import Ember from 'ember';
 
-const {Component, computed} = Ember;
+const {GlimmerComponent, computed} = Ember;
 
 const ZERO = 0;
 const TWENTY = 20;
 const MINUS_TWENTY = -20;
 
-export default Component.extend({
-  number: null,
-  isVisible: computed.notEmpty('number'),
+export default GlimmerComponent.extend({
+  isVisible: computed.notEmpty('attrs.number'),
   commentIsVisible: computed.notEmpty('comment'),
 
   integerNumber: function() {
-    return parseInt(this.get('number'), 10);
-  }.property('number'),
+    return parseInt(this.attrs.number, 10);
+  }.property('attrs.number'),
 
   comment: function() {
     if (this.get('integerNumber') === ZERO) {
@@ -29,5 +28,5 @@ export default Component.extend({
     }
 
     return null;
-  }.property('number')
+  }.property('integerNumber')
 });

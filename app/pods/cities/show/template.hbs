@@ -1,15 +1,10 @@
-<span>
-  The usual weather in
-</span>
+<span>The usual weather in</span>
 
-{{select-input
-  options=model.cities
-  selectedId=model.city.id
-  onChange='onCityChange'
-}}
+<select-input
+  options={{model.cities}}
+  selected-id={{model.city.id}}
+  on-change={{action 'onCityChange'}} />
 
-<span>
-  around
-</span>
+<span>around</span>
 
 {{outlet}}
