@@ -2,11 +2,7 @@ import Ember from 'ember';
 
 const Month = Ember.Object.extend({
   id: null,
-  name: null,
-
-  stringId: function() {
-    return this.get('id').toString();
-  }.property('id')
+  name: null
 });
 
 export default [

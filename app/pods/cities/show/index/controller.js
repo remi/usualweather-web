@@ -13,7 +13,7 @@ export default Controller.extend({
     },
 
     onMonthChange(monthId) {
-      const month = this.model.months.findBy('stringId', monthId);
+      const month = this.model.months.findBy('id', monthId);
       this.transitionToRoute('cities.show.weather-reports.show', month.get('name'));
     }
   }

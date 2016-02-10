@@ -1,9 +1,11 @@
 <div>
-  <select disabled={{attrs.isDisabled}} class="field" {{action 'handleChange' on='change'}}>
-    <option selected="{{isBlankSelected}}" value="{{empty-id}}">…</option>
+  {{#x-select class="field" disabled=attrs.is-disabled value=value action="handleChange"}}
+    <option>{{emptyName}}</option>
 
-    {{#each htmlOptions as |option| }}
-      <option selected="{{option.selected}}" value="{{option.id}}">{{option.name}}</option>
+    {{#each attrs.options as |option|}}
+      {{#x-option value=option.id}}
+        {{option.name}}
+      {{/x-option}}
     {{/each}}
-  </select>
+  {{/x-select}}
 </div>
